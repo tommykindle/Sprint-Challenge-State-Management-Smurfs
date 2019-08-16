@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
         ...state,
         smurfs: action.payload
       }
-    case 'Add_Smurf':
+    case Add_Smurf:
       return {
         ...state,
         smurfs: [

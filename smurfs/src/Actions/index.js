@@ -11,7 +11,9 @@ export const getSmurf = () => dispatch => {
 
 export const Add_Smurf = 'Add_Smurf'
 
-export const addNewSmurf = () => dispatch => {
+export const addNewSmurf = (addSmurf) => dispatch => {
   axios
-    .post
+    .post('http://localhost:3333/smurfs', addSmurf)
+    .then(res => dispatch({ type: Add_Smurf, payload: res.data }))
+    .catch(err => console.log('Cannot Add Smurf', err))
 }

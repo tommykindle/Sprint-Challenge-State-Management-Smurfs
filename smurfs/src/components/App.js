@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { connect } from 'react-redux';
 import { getSmurf } from '../Actions';
+import NewSmurf from "./Form";
 function App(props) {
 
   return (
@@ -12,7 +13,7 @@ function App(props) {
 
       <button onClick={props.getSmurf}>See The Smurfs</button>
 
-
+      <NewSmurf />
 
     </div>
   )
