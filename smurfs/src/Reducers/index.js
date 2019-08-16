@@ -1,4 +1,4 @@
-import { Get_Smurf } from '../Actions'
+import { Get_Smurf, Add_Smurf } from '../Actions'
 
 const initialState = {
   name: '',
@@ -14,6 +14,14 @@ export default (state = initialState, action) => {
       return {
         ...state,
         smurfs: action.payload
+      }
+    case 'Add_Smurf':
+      return {
+        ...state,
+        smurfs: [
+          ...state.smurfs,
+          { smurfs: action.payload }
+        ]
       }
     default:
       return state;
