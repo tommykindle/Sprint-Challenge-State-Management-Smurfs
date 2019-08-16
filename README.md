@@ -23,10 +23,21 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+ The context API is aimed at solving the problem of prop drilling
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions, store the functional 'actions' that a component is going to preform. reducers are pure functions given the same input will always give the same output so it will help you isolate state changes. The store is a single place that holds state value the single source of truth reference comes from the fact that it hold sthe state value of your entire component tree in one place.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+ Application state lives in the store and can be accessed from any component anywhere in the app. While component state is local state specific to that component and good example of using component state would be for something like a form where it does not need to access state of the global application just worries about it's own state
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+Thunk is middleware that makes actions return a function instead of an action to delay the dispatch of the action until a conditon is met.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+Redux is at this point because it makes passing props much easier however it is rather hard to learn it's a love hate relationship at this point.
 
 ## Project Set Up
 
